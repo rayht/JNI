@@ -1,0 +1,292 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffa1fc1f1e7, pid=5620, tid=0x0000000000001bd4
+#
+# JRE version: OpenJDK Runtime Environment (8.0_152-b02) (build 1.8.0_152-release-1024-b02)
+# Java VM: OpenJDK 64-Bit Server VM (25.152-b02 mixed mode windows-amd64 compressed oops)
+# Problematic frame:
+# C  [ucrtbased.dll+0xbf1e7]
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000000021ae800):  JavaThread "main" [_thread_in_native, id=7124, stack(0x0000000002520000,0x0000000002620000)]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0x0000000000000064
+
+Registers:
+RAX=0x0000000000000064, RBX=0x0000000016cbde38, RCX=0x0000000000000064, RDX=0x0000000000000070
+RSP=0x000000000261d4c0, RBP=0x000000000261df98, RSI=0x0000000000000001, RDI=0x000000000261de70
+R8 =0x0000000000000000, R9 =0xcdcdcdcdcdcdcdcd, R10=0x00007ffa3f6457d0, R11=0x0000000000824c80
+R12=0x0000000000000000, R13=0x0000000016cbde38, R14=0x000000000261dfc8, R15=0x00000000021ae800
+RIP=0x00007ffa1fc1f1e7, EFLAGS=0x0000000000010246
+
+Top of Stack: (sp=0x000000000261d4c0)
+0x000000000261d4c0:   0000000000000064 0000000000000070
+0x000000000261d4d0:   000000000261d500 00007ffa00000040
+0x000000000261d4e0:   0000000000000064 0000000000000070
+0x000000000261d4f0:   0000000000000001 00007ffa1fc1fe06
+0x000000000261d500:   0000000000000064 000000000000000c
+0x000000000261d510:   00007ffa1fd09c58 00007ffa1fd09c58
+0x000000000261d520:   0000000000824c81 00007ffa1fd09c6c
+0x000000000261d530:   00000000021ae800 00007ffa1fc1568e
+0x000000000261d540:   000000000000000c 0000000000000004
+0x000000000261d550:   000000000000000c 000000000000000c
+0x000000000261d560:   000000000000000c 000000000261d660
+0x000000000261d570:   0000000000000064 00000000000000ff
+0x000000000261d580:   0000000000000007 00007ffa1fd09c58
+0x000000000261d590:   000000000000002c 0000000059798d17
+0x000000000261d5a0:   00000000d6779ea8 00007ffa1fc15e48
+0x000000000261d5b0:   0000000000002042 00007ffa1fd09c58 
+
+Instructions: (pc=0x00007ffa1fc1f1e7)
+0x00007ffa1fc1f1c7:   48 89 44 24 20 48 8b 54 24 28 48 8b 4c 24 20 e8
+0x00007ffa1fc1f1d7:   35 11 00 00 0f b6 c0 85 c0 75 0e 48 8b 44 24 20
+0x00007ffa1fc1f1e7:   0f b6 00 85 c0 74 02 eb cf 48 8b 44 24 40 48 8b
+0x00007ffa1fc1f1f7:   4c 24 20 48 2b c8 48 8b c1 48 83 c4 38 c3 cc cc 
+
+
+Register to memory mapping:
+
+RAX=0x0000000000000064 is an unknown value
+RBX={method} {0x0000000016cbde40} 'test' '(ILjava/lang/String;)V' in 'com/ffmpeg/player/ExampleUnitTest'
+RCX=0x0000000000000064 is an unknown value
+RDX=0x0000000000000070 is an unknown value
+RSP=0x000000000261d4c0 is pointing into the stack for thread: 0x00000000021ae800
+RBP=0x000000000261df98 is pointing into the stack for thread: 0x00000000021ae800
+RSI=0x0000000000000001 is an unknown value
+RDI=0x000000000261de70 is pointing into the stack for thread: 0x00000000021ae800
+R8 =0x0000000000000000 is an unknown value
+R9 =0xcdcdcdcdcdcdcdcd is an unknown value
+R10=0x00007ffa3f6457d0 is an unknown value
+R11=0x0000000000824c80 is an unknown value
+R12=0x0000000000000000 is an unknown value
+R13={method} {0x0000000016cbde40} 'test' '(ILjava/lang/String;)V' in 'com/ffmpeg/player/ExampleUnitTest'
+R14=0x000000000261dfc8 is pointing into the stack for thread: 0x00000000021ae800
+R15=0x00000000021ae800 is a thread
+
+
+Stack: [0x0000000002520000,0x0000000002620000],  sp=0x000000000261d4c0,  free space=1013k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [ucrtbased.dll+0xbf1e7]
+C  [ucrtbased.dll+0xbfe06]
+C  [ucrtbased.dll+0xbf092]
+C  [ucrtbased.dll+0xc04ed]
+C  [ucrtbased.dll+0xaa468]
+C  [ucrtbased.dll+0xa9e82]
+C  [ucrtbased.dll+0x9e8b2]
+C  [ucrtbased.dll+0x96fd7]
+C  [ucrtbased.dll+0x9587d]
+C  [ucrtbased.dll+0x8c085]
+C  [ucrtbased.dll+0x8c27b]
+C  [ucrtbased.dll+0x8cbd7]
+C  [ucrtbased.dll+0xaea3b]
+C  [lsn07jni.dll+0x1534]  _vfprintf_l+0x54
+C  [lsn07jni.dll+0x15a7]  printf+0x57
+C  [lsn07jni.dll+0x1449]  Java_com_ffmpeg_player_ExampleUnitTest_test+0x59
+C  0x00000000027389a7
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  com.ffmpeg.player.ExampleUnitTest.test(ILjava/lang/String;)V+0
+j  com.ffmpeg.player.ExampleUnitTest.addition_isCorrect()V+10
+v  ~StubRoutines::call_stub
+j  sun.reflect.NativeMethodAccessorImpl.invoke0(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+0
+j  sun.reflect.NativeMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+100
+j  sun.reflect.DelegatingMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+6
+j  java.lang.reflect.Method.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+56
+j  org.junit.runners.model.FrameworkMethod$1.runReflectiveCall()Ljava/lang/Object;+15
+j  org.junit.internal.runners.model.ReflectiveCallable.run()Ljava/lang/Object;+1
+j  org.junit.runners.model.FrameworkMethod.invokeExplosively(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+10
+j  org.junit.internal.runners.statements.InvokeMethod.evaluate()V+12
+j  org.junit.runners.ParentRunner.runLeaf(Lorg/junit/runners/model/Statement;Lorg/junit/runner/Description;Lorg/junit/runner/notification/RunNotifier;)V+17
+j  org.junit.runners.BlockJUnit4ClassRunner.runChild(Lorg/junit/runners/model/FrameworkMethod;Lorg/junit/runner/notification/RunNotifier;)V+30
+j  org.junit.runners.BlockJUnit4ClassRunner.runChild(Ljava/lang/Object;Lorg/junit/runner/notification/RunNotifier;)V+6
+j  org.junit.runners.ParentRunner$3.run()V+12
+j  org.junit.runners.ParentRunner$1.schedule(Ljava/lang/Runnable;)V+1
+j  org.junit.runners.ParentRunner.runChildren(Lorg/junit/runner/notification/RunNotifier;)V+44
+j  org.junit.runners.ParentRunner.access$000(Lorg/junit/runners/ParentRunner;Lorg/junit/runner/notification/RunNotifier;)V+2
+j  org.junit.runners.ParentRunner$2.evaluate()V+8
+j  org.junit.runners.ParentRunner.run(Lorg/junit/runner/notification/RunNotifier;)V+20
+j  org.junit.runner.JUnitCore.run(Lorg/junit/runner/Runner;)Lorg/junit/runner/Result;+37
+j  com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs([Ljava/lang/String;Ljava/lang/String;IZ)I+146
+j  com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(Lcom/intellij/rt/execution/junit/IdeaTestRunner;[Ljava/lang/String;Ljava/util/ArrayList;Ljava/lang/String;IZ)I+20
+j  com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart([Ljava/lang/String;Ljava/lang/String;Ljava/util/ArrayList;Ljava/lang/String;)I+116
+j  com.intellij.rt.execution.junit.JUnitStarter.main([Ljava/lang/String;)V+116
+v  ~StubRoutines::call_stub
+j  sun.reflect.NativeMethodAccessorImpl.invoke0(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+0
+j  sun.reflect.NativeMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+100
+j  sun.reflect.DelegatingMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+6
+j  java.lang.reflect.Method.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+56
+j  com.intellij.rt.execution.application.AppMainV2.main([Ljava/lang/String;)V+184
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x0000000018659800 JavaThread "Monitor Ctrl-Break" daemon [_thread_in_native, id=1084, stack(0x00000000190a0000,0x00000000191a0000)]
+  0x000000001863f000 JavaThread "Service Thread" daemon [_thread_blocked, id=1136, stack(0x0000000018ea0000,0x0000000018fa0000)]
+  0x00000000185af800 JavaThread "C1 CompilerThread2" daemon [_thread_blocked, id=988, stack(0x0000000018da0000,0x0000000018ea0000)]
+  0x00000000185a9000 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=4228, stack(0x0000000018ca0000,0x0000000018da0000)]
+  0x000000001729c000 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=7352, stack(0x0000000018ba0000,0x0000000018ca0000)]
+  0x000000001729b000 JavaThread "Attach Listener" daemon [_thread_blocked, id=2768, stack(0x0000000018aa0000,0x0000000018ba0000)]
+  0x0000000017251000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=7980, stack(0x00000000189a0000,0x0000000018aa0000)]
+  0x000000000271d000 JavaThread "Finalizer" daemon [_thread_blocked, id=5360, stack(0x00000000184a0000,0x00000000185a0000)]
+  0x0000000017207000 JavaThread "Reference Handler" daemon [_thread_blocked, id=3412, stack(0x00000000183a0000,0x00000000184a0000)]
+=>0x00000000021ae800 JavaThread "main" [_thread_in_native, id=7124, stack(0x0000000002520000,0x0000000002620000)]
+
+Other Threads:
+  0x0000000017206000 VMThread [stack: 0x00000000182a0000,0x00000000183a0000] [id=5240]
+  0x0000000018642000 WatcherThread [stack: 0x0000000018fa0000,0x00000000190a0000] [id=6748]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 38400K, used 8653K [0x00000000d5f80000, 0x00000000d8a00000, 0x0000000100000000)
+  eden space 33280K, 26% used [0x00000000d5f80000,0x00000000d67f34e0,0x00000000d8000000)
+  from space 5120K, 0% used [0x00000000d8500000,0x00000000d8500000,0x00000000d8a00000)
+  to   space 5120K, 0% used [0x00000000d8000000,0x00000000d8000000,0x00000000d8500000)
+ ParOldGen       total 87552K, used 0K [0x0000000081e00000, 0x0000000087380000, 0x00000000d5f80000)
+  object space 87552K, 0% used [0x0000000081e00000,0x0000000081e00000,0x0000000087380000)
+ Metaspace       used 5121K, capacity 5344K, committed 5504K, reserved 1056768K
+  class space    used 577K, capacity 627K, committed 640K, reserved 1048576K
+
+Card table byte_map: [0x0000000011ae0000,0x0000000011ee0000] byte_map_base: 0x00000000116d1000
+
+Marking Bits: (ParMarkBitMap*) 0x0000000059fd4970
+ Begin Bits: [0x0000000012590000, 0x0000000014518000)
+ End Bits:   [0x0000000014518000, 0x00000000164a0000)
+
+Polling page: 0x0000000000980000
+
+CodeCache: size=245760Kb used=1781Kb max_used=1789Kb free=243978Kb
+ bounds [0x0000000002720000, 0x0000000002990000, 0x0000000011720000]
+ total_blobs=550 nmethods=273 adapters=191
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 1.244 Thread 0x00000000185af800 nmethod 269 0x00000000028dad10 code [0x00000000028db020, 0x00000000028dcc08]
+Event: 1.244 Thread 0x00000000185af800  271  s!   3       java.net.URLStreamHandler::getHostAddress (54 bytes)
+Event: 1.245 Thread 0x00000000185af800 nmethod 271 0x00000000028d6a50 code [0x00000000028d6c00, 0x00000000028d73b8]
+Event: 1.245 Thread 0x00000000185af800  270  s    1       java.io.ByteArrayOutputStream::size (5 bytes)
+Event: 1.245 Thread 0x00000000185af800 nmethod 270 0x00000000028d6610 code [0x00000000028d6760, 0x00000000028d69d0]
+Event: 1.249 Thread 0x00000000185a9000 nmethod 272 0x00000000028d5f90 code [0x00000000028d60e0, 0x00000000028d63d8]
+Event: 1.251 Thread 0x00000000185af800  273  s    3       sun.misc.URLClassPath::getLookupCache (98 bytes)
+Event: 1.251 Thread 0x00000000185af800 nmethod 273 0x00000000028e00d0 code [0x00000000028e0260, 0x00000000028e07d8]
+Event: 1.255 Thread 0x00000000185af800  274   !   3       java.util.zip.Inflater::ended (32 bytes)
+Event: 1.255 Thread 0x00000000185af800 nmethod 274 0x00000000028dfa50 code [0x00000000028dfbc0, 0x00000000028dff90]
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 0.663 Thread 0x00000000021ae800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000d6283000) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jvm.cpp, line 1390]
+Event: 0.663 Thread 0x00000000021ae800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000d6283210) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jvm.cpp, line 1390]
+Event: 0.665 Thread 0x00000000021ae800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000d6285788) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jvm.cpp, line 1390]
+Event: 0.665 Thread 0x00000000021ae800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000d6285998) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jvm.cpp, line 1390]
+Event: 0.665 Thread 0x00000000021ae800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000d6286818) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jvm.cpp, line 1390]
+Event: 0.665 Thread 0x00000000021ae800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000d6286a28) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jvm.cpp, line 1390]
+Event: 0.745 Thread 0x00000000021ae800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000d629d870) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jvm.cpp, line 1390]
+Event: 0.745 Thread 0x00000000021ae800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000d629dc68) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jvm.cpp, line 1390]
+Event: 0.745 Thread 0x00000000021ae800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000d629efd0) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jvm.cpp, line 1390]
+Event: 0.745 Thread 0x00000000021ae800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000d629f3c8) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jvm.cpp, line 1390]
+
+Events (10 events):
+Event: 1.250 loading class org/junit/runners/BlockJUnit4ClassRunner$1
+Event: 1.250 loading class org/junit/runners/BlockJUnit4ClassRunner$1 done
+Event: 1.251 loading class org/junit/internal/runners/model/ReflectiveCallable
+Event: 1.251 loading class org/junit/internal/runners/model/ReflectiveCallable done
+Event: 1.253 loading class org/junit/rules/MethodRule
+Event: 1.253 loading class org/junit/rules/MethodRule done
+Event: 1.254 loading class org/junit/runner/notification/RunNotifier$3
+Event: 1.254 loading class org/junit/runner/notification/RunNotifier$3 done
+Event: 1.255 loading class org/junit/runners/model/FrameworkMethod$1
+Event: 1.255 loading class org/junit/runners/model/FrameworkMethod$1 done
+
+
+Dynamic libraries:
+0x00007ff6f1a00000 - 0x00007ff6f1a31000 	D:\java\android-studio\jre\bin\java.exe
+0x00007ffa3f640000 - 0x00007ffa3f7ed000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffa3d180000 - 0x00007ffa3d2be000 	C:\WINDOWS\system32\KERNEL32.DLL
+0x00007ffa3cad0000 - 0x00007ffa3cbe6000 	C:\WINDOWS\system32\KERNELBASE.dll
+0x00007ffa3d570000 - 0x00007ffa3d61a000 	C:\WINDOWS\system32\ADVAPI32.dll
+0x00007ffa3d620000 - 0x00007ffa3d797000 	C:\WINDOWS\system32\USER32.dll
+0x00007ffa3a160000 - 0x00007ffa3a3db000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.9600.18006_none_623f33d3ecbe86e8\COMCTL32.dll
+0x00007ffa3ceb0000 - 0x00007ffa3cf5a000 	C:\WINDOWS\system32\msvcrt.dll
+0x00007ffa3de80000 - 0x00007ffa3ded9000 	C:\WINDOWS\SYSTEM32\sechost.dll
+0x00007ffa3d820000 - 0x00007ffa3d960000 	C:\WINDOWS\system32\RPCRT4.dll
+0x00007ffa3dd30000 - 0x00007ffa3de7b000 	C:\WINDOWS\system32\GDI32.dll
+0x00007ffa3cca0000 - 0x00007ffa3ccce000 	C:\WINDOWS\system32\SspiCli.dll
+0x00007ffa3da90000 - 0x00007ffa3dac6000 	C:\WINDOWS\system32\IMM32.DLL
+0x00007ffa3f4e0000 - 0x00007ffa3f631000 	C:\WINDOWS\system32\MSCTF.dll
+0x0000000059730000 - 0x0000000059802000 	D:\java\android-studio\jre\jre\bin\msvcr100.dll
+0x0000000059810000 - 0x000000005a04f000 	D:\java\android-studio\jre\jre\bin\server\jvm.dll
+0x00007ffa341a0000 - 0x00007ffa341a9000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffa38da0000 - 0x00007ffa38dc2000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffa38dd0000 - 0x00007ffa38dda000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffa3da80000 - 0x00007ffa3da87000 	C:\WINDOWS\system32\PSAPI.DLL
+0x00007ffa3d2c0000 - 0x00007ffa3d31a000 	C:\WINDOWS\system32\WS2_32.dll
+0x00007ffa38d60000 - 0x00007ffa38d8a000 	C:\WINDOWS\SYSTEM32\WINMMBASE.dll
+0x00007ffa3d560000 - 0x00007ffa3d569000 	C:\WINDOWS\system32\NSI.dll
+0x00007ffa3cc50000 - 0x00007ffa3cc9f000 	C:\WINDOWS\SYSTEM32\cfgmgr32.dll
+0x00007ffa3b580000 - 0x00007ffa3b5a8000 	C:\WINDOWS\SYSTEM32\DEVOBJ.dll
+0x00007ffa38c90000 - 0x00007ffa38c9f000 	D:\java\android-studio\jre\jre\bin\verify.dll
+0x00007ffa387c0000 - 0x00007ffa387e9000 	D:\java\android-studio\jre\jre\bin\java.dll
+0x00007ffa381e0000 - 0x00007ffa381f6000 	D:\java\android-studio\jre\jre\bin\zip.dll
+0x00007ffa3dee0000 - 0x00007ffa3f40c000 	C:\WINDOWS\system32\SHELL32.dll
+0x00007ffa3cf60000 - 0x00007ffa3d172000 	C:\WINDOWS\SYSTEM32\combase.dll
+0x00007ffa3d7b0000 - 0x00007ffa3d804000 	C:\WINDOWS\system32\SHLWAPI.dll
+0x00007ffa3ace0000 - 0x00007ffa3ad92000 	C:\WINDOWS\SYSTEM32\SHCORE.dll
+0x00007ffa3c770000 - 0x00007ffa3c785000 	C:\WINDOWS\SYSTEM32\profapi.dll
+0x00007ffa30270000 - 0x00007ffa3028a000 	D:\java\android-studio\bin\breakgen64.dll
+0x00007ffa381c0000 - 0x00007ffa381da000 	D:\java\android-studio\jre\jre\bin\net.dll
+0x00007ffa3c000000 - 0x00007ffa3c059000 	C:\WINDOWS\system32\mswsock.dll
+0x00007ffa2fab0000 - 0x00007ffa2fac2000 	C:\Users\Leiht\CMakeBuilds\1576c1d5-de6f-1e37-b0be-3763f01ada6c\build\x64-Debug\Lsn_07\lsn07jni.dll
+0x00007ffa2d630000 - 0x00007ffa2d651000 	C:\WINDOWS\SYSTEM32\VCRUNTIME140D.dll
+0x00007ffa1fb60000 - 0x00007ffa1fd1d000 	C:\WINDOWS\SYSTEM32\ucrtbased.dll
+0x00007ffa1f550000 - 0x00007ffa1f6d9000 	C:\WINDOWS\SYSTEM32\dbghelp.dll
+
+VM Arguments:
+jvm_args: -ea -Didea.test.cyclic.buffer.size=1048576 -Didea.launcher.port=52320 -Didea.launcher.bin.path=D:\java\android-studio\bin -Dfile.encoding=UTF-8 
+java_command: com.intellij.rt.execution.application.AppMainV2 com.intellij.rt.execution.junit.JUnitStarter -ideVersion5 com.ffmpeg.player.ExampleUnitTest,addition_isCorrect
+java_class_path (initial): D:\java\android-studio\lib\idea_rt.jar;D:\java\android-studio\plugins\junit\lib\junit-rt.jar;D:\java\android-studio\plugins\junit\lib\junit5-rt.jar;D:\java\sdk_studio\platforms\android-27\data\res;D:\github\Android_Player\app\build\intermediates\classes\test\debug;D:\github\Android_Player\app\build\intermediates\classes\debug;C:\Users\Leiht\.gradle\caches\modules-2\files-2.1\android.arch.lifecycle\common\1.1.0\edf3f7bfb84a7521d0599efa3b0113a0ee90f85\common-1.1.0.jar;C:\Users\Leiht\.gradle\caches\modules-2\files-2.1\com.android.support\support-annotations\27.1.1\39ded76b5e1ce1c5b2688e1d25cdc20ecee32007\support-annotations-27.1.1.jar;C:\Users\Leiht\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\02dcf5ea387224c92a301ac66cf7ce42\jars\classes.jar;C:\Users\Leiht\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\7e91da918e5d981a8bc946f3c9c4ada9\jars\classes.jar;C:\Users\Leiht\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\7e91da918e5d981a8bc946f3c9c4ada9\res;C:\Users\Leiht\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\bba90b441583a98ac180206174abc5b9\jars\classes.jar;C:\Users\Leiht\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\d35561f487c4681db707f7261a22d068\jars\classes.jar;C:\Users\Leiht\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\12929bf12cb51418dbfe335660a2287e\res;C:\Users\Leiht\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\12929bf12cb51418dbfe335660a2287e\jars\classes.jar;C:\Users\Leiht\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\b22b982a2f1b332e38715eb9bae02320\jars\classes.jar;C:\Users\Leiht\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\04394e0304755f08ccbb13118fe81e68\jars\classes.jar;C:\Users\Leiht\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\04394e0304755f08ccbb13118fe81e68\res;C:\Users\Leiht\.gradle\caches\transforms-1\files-1.1\supp
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=D:\java\jdk1.8
+CLASSPATH=.;D:\java\jdk1.8\lib;D:\java\jdk1.8\lib\tools.jar
+PATH=C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Sony\VAIO Improvement\;C:\Program Files (x86)\Sony\VAIO Startup Setting Tool;D:\java\jdk1.8\bin;D:\java\jdk1.8\jre\bin;D:\java\sdk_studio\platform-tools;D:\java\sdk_studio\tools;D:\java\gradle\gradle-4.4\bin;C:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\
+USERNAME=Leiht
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 58 Stepping 9, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 8.1 , 64 bit Build 9600 (6.3.9600.17415)
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 58 stepping 9, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, clmul, erms, ht, tsc, tscinvbit, tscinv
+
+Memory: 4k page, physical 8264984k(3446084k free), swap 9641240k(3199528k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.152-b02) for windows-amd64 JRE (1.8.0_152-release-1024-b02), built by "builder" with MS VC++ 10.0 (VS2010)
+
+time: Sun Sep 16 00:39:44 2018
+elapsed time: 1 seconds (0d 0h 0m 1s)
+
